@@ -1,0 +1,521 @@
+doctype transitional
+html(xmlns="http://www.w3.org/1999/xhtml")
+  head
+    meta(http-equiv="Content-Type", content="text/html; charset=utf-8")
+    meta(name="author", content="Gmoney$")
+    meta(name="Description", content="A Virtual Sports Novelty Betting Portal")
+    meta(name="Keywords", content="Bets,Sports")
+    title Fynnegans - Home
+    link(href="stylesheets/style.css", media="screen", rel="stylesheet", type="text/css")
+    script(type="text/javascript", src="javascripts/jquery.js")
+    script(type="text/javascript", src="javascripts/preloadCssImages.js")
+    script(type="text/javascript", src="javascripts/jquery.color.js")
+    script(type="text/javascript", language="JavaScript", src="javascripts/general.js")
+    script(type="text/javascript", language="JavaScript", src="javascripts/jquery.tools.min.js")
+    script(type="text/javascript", language="JavaScript", src="javascripts/jquery.easing.1.3.js")
+    script(type="text/javascript", language="JavaScript", src="javascripts/slides.jquery.js")
+    link(rel="stylesheet", href="stylesheets/prettyPhoto.css", type="text/css", media="screen")
+    script(src="javascripts/jquery.prettyPhoto.js", type="text/javascript")
+    // slider
+    script(src="javascripts/jquery.bxSlider.min.js", type="text/javascript")
+    link(href="stylesheets/bxSlider.css", media="screen", rel="stylesheet", type="text/css")
+    script(type="text/javascript")
+      $(window).load(function () {
+      var slider = $('#slider1').bxSlider({
+      controls: false
+      mode: 'vertical'
+      speed: 500
+      pause: 7000
+      easing: 'easeOutCubic'
+      auto: true
+      autoHover: true
+      });
+      $('#go-prev').click(function(){
+      slider.goToPreviousSlide()
+      return false;
+      });
+      $('#go-next').click(function(){
+      slider.goToNextSlide()
+      return false;
+      });
+      });
+    //if IE 7
+      link(rel="stylesheet", type="text/css", href="css/ie.css")
+    link(href="custom.css", media="screen", rel="stylesheet", type="text/css")
+  body
+    .body_wrap.homepage
+      // slider
+      .header_slider
+        ul#slider1.bxSlider
+          li(style="background: url('images/slider_1_1.jpg') no-repeat scroll center 0 transparent;")
+            // <img src="images/temp/slider_1_1.jpg" alt="01" class="slide-img" />
+            .fakeimg
+            .slide-text-wrapper
+              .slide-text-content
+                .meta-date
+                  span.ico_cat
+                    em Cycling
+                  | Friday 15th of September, 23 mintes ago
+                a.slide-title(href="#")
+                  strong Cavendish wins in Paris last stage of TDF 2011
+                .slide-button
+                  a.button_link(href="article.html")
+                    span Read
+                  a.link-comments(href="article.html#comments") 86 Comments
+          li(style="background: url('images/slider_1_2.jpg') no-repeat scroll center 0 transparent;")
+            // <img src="images/temp/slider_1_2.jpg" alt="02" class="slide-img" />
+            .fakeimg
+            .slide-text-wrapper
+              .slide-text-content
+                .meta-date
+                  span.ico_cat
+                    em Soccer
+                  | Friday 15th of September, 48 mintes ago
+                a.slide-title(href="#")
+                  strong Celtics come back from 2-0 to qualify in UCL finals
+                .slide-button
+                  a.button_link(href="article.html")
+                    span Read
+                  a.link-comments(href="article.html#comments") 86 Comments
+          li(style="background: url('images/slider_1_3.jpg') no-repeat scroll center 0 transparent;")
+            // <img src="images/temp/slider_1_3.jpg" alt="03" class="slide-img" />
+            .fakeimg
+            .slide-text-wrapper
+              .slide-text-content
+                .meta-date
+                  span.ico_cat
+                    em Motocross
+                  | Friday 15th of September, 1 hour ago
+                a.slide-title(href="#")
+                  strong UK Motocross Championship to be decided in last race
+                p
+                  a.button_link(href="article.html")
+                    span Read
+                  a.link-comments(href="article.html#comments") 56 Comments
+          li(style="background: url('images/slider_1_4.jpg') no-repeat scroll center 0 transparent;")
+            // <img src="images/temp/slider_1_4.jpg" alt="04" class="slide-img" />
+            .fakeimg
+            .slide-text-wrapper
+              .slide-text-content
+                .meta-date
+                  span.ico_cat
+                    em NFL
+                  | Friday 15th of September, 2 hours ago
+                a.slide-title(href="#")
+                  strong Giants" Brandon Jacobs making good on vow to not play hurt
+                .slide-button
+                  a.button_link(href="article.html")
+                    span Read
+                  a.link-comments(href="article.html#comments") 86 Comments
+      // / slider
+      .container_title
+        .header_title
+          .header_tab_title
+            a#go-prev.slider-prev(href="#prev") Prev
+            a#go-next.slider-next(href="#next") Next
+            h1.title Brek Shea: The next American Superstar
+      .header_menu
+        .container
+          .logo
+            a(href="index.html")
+              img(src="images/logo.png", alt="")
+          .top_login_box
+            a(href="https://www.bookiemarket.com/splashscreen/bookiemarket/LOGIN/playerlogin.aspx?") Sign In
+          // topmenu
+          .topmenu
+            ul.dropdown
+              li
+                a(href="category-NFL.html")
+                  span NFL
+              li
+                a(href="category-MLB.html")
+                  span MLB
+              li
+                a(href="category-NBA.html")
+                  span NBA
+              li
+                a(href="category-NHL.html")
+                  span NHL
+              li
+                a(href="category-NCAAF.html")
+                  span NCAAF
+              li
+                a(href="category-NCAAB.html")
+                  span NCAAB
+              li
+                a(href="category-Nascar.html")
+                  span Nascar
+              li
+                a(href="category-Golf.html")
+                  span Golf
+              li
+                a(href="category-Soccer.html")
+                  span Soccer
+              li
+                a(href="category-NBA.html")
+                  span Tennis
+              //
+                <li><a href="#"><span>More</span></a>
+                              <ul>
+                                <li><a href="portfolio.html"><span>Portfolio</span></a>
+                                  <ul>
+                                    <li><a href="#"><span>Full Width</span></a></li>
+                                    <li><a href="#"><span>Two Columns</span></a></li>
+                                    <li><a href="#"><span>Three Columns</span></a></li>
+                                  </ul>
+                                </li>
+                                <li><a href="about.html"><span>About</span></a></li>
+                                <li><a href="#"><span>Shortcodes</span></a>
+                                  <ul>
+                                    <li><a href="shortcodes-text.html"><span>Text &amp; Images</span></a></li>
+                                    <li><a href="shortcodes-buttons.html"><span>Buttons &amp; Lists</span></a></li>
+                                    <li><a href="shortcodes-charts.html"><span>Charts</span></a></li>
+                                    <li><a href="shortcodes-columns.html"><span>Columns</span></a></li>
+                                    <li><a href="shortcodes-lightbox.html"><span>Lightbox</span></a></li>
+                                    <li><a href="shortcodes-media.html"><span>Media</span></a></li>
+                                    <li><a href="shortcodes-tables.html"><span>Tables</span></a></li>
+                                    <li><a href="shortcodes-tabs.html"><span>Tabs and Toggles</span></a></li>
+                                    <li><a href="shortcodes-typography.html"><span>Typography</span></a></li>
+                                    <li><a href="shortcodes-widgets.html"><span>Widgets</span></a></li>
+                                  </ul>
+                                </li>
+                                <li><a href="contact.html"><span>Contact</span></a></li>
+                                <li><a href="pricing.html"><span>Pricing</span></a></li>
+                              </ul>
+                            </li>
+          // / topmenu
+      // / header
+      // middle
+      .middle
+        .container_12
+          // featured content
+          .featured_block
+            .col.col_2_3
+              // <a class="twitter-timeline" href="https://twitter.com/ScoresPro" data-widget-id="377321155557744640">Tweets by @ScoresPro</a>
+              script
+                !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+              // tabs in text
+              .featured_tabs
+                //
+
+                                <ul class="tabs">
+                                  <li><a href="#featured_tab_1">Recent</a></li>
+                                  <li><a href="#featured_tab_2">Popular</a></li>
+                                  <li><a href="#featured_tab_3">Most Commented</a></li>
+                                </ul>
+
+                #featured_tab_1.tabcontent
+                  .featured_post
+                    .meta-date
+                      span.ico_cat NBA
+                      | Thursday, September 4, 9 minutes ago
+                    .post-name
+                      .post-image
+                        img(src="images/entry_img_1.jpg", width="300", height="295", alt="")
+                      .post-title
+                        a(href="article.html") Union staffers set meeting, formal session will follow
+                    .post-short
+                      | Last week, New York Knicks shooting specialist and players" union vice president Roger Mason Junior. caused a stir when his Twitter account pontaneously combusted. and mistakenly told everyone that it ...
+                    .meta-bot
+                      a.button_link(href="article.html")
+                        span Read
+                      a.link-comments(href="article.html#comments") 45 Comments
+                  .featured_list
+                    ul
+                      if articles
+                        each article in articles
+                          each info in article
+                            li
+                              img.article-image(src=info.enclosure.$.url)
+                              a.post-title(href=info.link)=info.title
+                              .meta-date
+                                span.ico_cat=info.category
+                                =info.pubDate
+                      li
+                        a.post-title(href="article.html") Wolves say they"re installing Adelman as coach
+                        .meta-date
+                          span.ico_cat NBA
+                          | Sep 3, 27 minutes ago
+                      li
+                        a.post-title(href="article.html") World title for Alistair Brownlee
+                        .meta-date
+                          span.ico_cat Tennis
+                          | Sep 3, 7 hours ago
+                      li
+                        a.post-title(href="article.html") Ranking the jobs of the NBA"s six new coaches
+                        .meta-date
+                          span.ico_cat NBA
+                          | Oct 3, 1 day ago
+                      li
+                        a.post-title(href="article.html") The Big 12 Conference has been a two-way street
+                        .meta-date
+                          span.ico_cat MLB
+                          | Sep 1, 4 day ago
+                      li
+                        a.post-title(href="article.html") The 12 Conference has been a 2-way street
+                        .meta-date
+                          span.ico_cat Soccer
+                          | Aug 3, 5 day ago
+                      li
+                        a.post-title(href="article.html") Tiger Woods plays down incident during the final round
+                        .meta-date
+                          span.ico_cat Golf
+                          | Aug 3, 5 day ago
+                    a.link-comments(href="article.html#comments") Browse Archive
+                  .clear
+                //
+                    <div id="featured_tab_2" class="tabcontent">
+                                  <div class="featured_post">
+                                    <div class="meta-date"><span class="ico_cat">Golf</span> Thursday, September 4, 9 minutes ago</div>
+                                    <div class="post-name">
+                                      <div class="post-image"><img src="images/temp/entry_img_2.jpg" width="300" height="295" alt="" /></div>
+                                      <div class="post-title"><a href="article.html">Tiger Woods plays down incident</a></div>
+                                    </div>
+                                    <div class="post-short">Last week, New York Knicks shooting specialist and players' union vice president Roger Mason Junior. caused a stir when his Twitter account pontaneously combusted. and mistakenly told everyone that it ...</div>
+                                    <div class="meta-bot"><a href="article.html" class="button_link"><span>Read</span></a> &nbsp; <a href="article.html#comments" class="link-comments">52 Comments</a></div>
+                                  </div>
+                //
+                   <div class="featured_list">
+                                    <ul>
+                                      <li>
+                                        <a href="article.html" class="post-title">World title for Alistair Brownlee</a>
+                                        <div class="meta-date"><span class="ico_cat">Tennis</span> Sep 3, 7 hours ago</div>
+                                      </li>
+                                      <li>
+                                        <a href="article.html" class="post-title">The Big 12 Conference has been a two-way street</a>
+                                        <div class="meta-date"><span class="ico_cat">MLB</span> Sep 1, 4 day ago</div>
+                                      </li>
+                                      <li>
+                                        <a href="article.html" class="post-title">The 12 Conference has been a 2-way street</a>
+                                        <div class="meta-date"><span class="ico_cat">Soccer</span> Aug 3, 5 day ago</div>
+                                      </li>
+                                      <li>
+                                        <a href="article.html" class="post-title">Wolves say they're installing Adelman as coach</a>
+                                        <div class="meta-date"><span class="ico_cat">NBA</span> Sep 3, 27 minutes ago</div>
+                                      </li>
+                                      <li>
+                                        <a href="article.html" class="post-title">Ranking the jobs of the NBA's six new coaches</a>
+                                        <div class="meta-date"><span class="ico_cat">NBA</span> Oct 3, 1 day ago</div>
+                                      </li>
+                                      <li>
+                                        <a href="article.html" class="post-title">Tiger Woods plays down incident during the final round</a>
+                                        <div class="meta-date"><span class="ico_cat">Golf</span> Aug 3, 5 day ago</div>
+                                      </li>
+                                    </ul>
+                                    <a href="article.html#comments" class="link-comments">Browse Archive</a>
+                                  </div>
+                                  <div class="clear"></div>
+                                </div>
+                                <div id="featured_tab_3" class="tabcontent">
+                                  <div class="featured_post">
+                                    <div class="meta-date"><span class="ico_cat">NFL</span> Thursday, September 4, 9 minutes ago</div>
+                                    <div class="post-name">
+                                      <div class="post-image"><img src="images/temp/entry_img_3.jpg" width="300" height="295" alt="" /></div>
+                                      <div class="post-title"><a href="article.html">The Big 12 Conference has been a two-way street</a></div>
+                                    </div>
+                                    <div class="post-short">Last week, New York Knicks shooting specialist and players' union vice president Roger Mason Junior. caused a stir when his Twitter account pontaneously combusted. and mistakenly told everyone that it ...</div>
+                                    <div class="meta-bot"><a href="article.html" class="button_link"><span>Read</span></a> &nbsp; <a href="article.html#comments" class="link-comments">75 Comments</a></div>
+                                  </div>
+                                  <div class="featured_list">
+                                    <ul>
+                                      <li>
+                                        <a href="article.html" class="post-title">The Big 12 Conference has been a two-way street</a>
+                                        <div class="meta-date"><span class="ico_cat">MLB</span> Sep 1, 4 day ago</div>
+                                      </li>
+                                      <li>
+                                        <a href="article.html" class="post-title">Wolves say they're installing Adelman as coach</a>
+                                        <div class="meta-date"><span class="ico_cat">NBA</span> Sep 3, 27 minutes ago</div>
+                                      </li>
+                                      <li>
+                                        <a href="article.html" class="post-title">World title for Alistair Brownlee</a>
+                                        <div class="meta-date"><span class="ico_cat">Tennis</span> Sep 3, 7 hours ago</div>
+                                      </li>
+                                      <li>
+                                        <a href="article.html" class="post-title">The 12 Conference has been a 2-way street</a>
+                                        <div class="meta-date"><span class="ico_cat">Soccer</span> Aug 3, 5 day ago</div>
+                                      </li>
+                                      <li>
+                                        <a href="article.html" class="post-title">Tiger Woods plays down incident during the final round</a>
+                                        <div class="meta-date"><span class="ico_cat">Golf</span> Aug 3, 5 day ago</div>
+                                      </li>
+                                      <li>
+                                        <a href="article.html" class="post-title">Ranking the jobs of the NBA's six new coaches</a>
+                                        <div class="meta-date"><span class="ico_cat">NBA</span> Oct 3, 1 day ago</div>
+                                      </li>
+                                    </ul>
+                                    <a href="article.html#comments" class="link-comments">Browse Archive</a>
+                                  </div>
+                                  <div class="clear"></div>
+                                </div>
+                              </div>
+                // / tabs in text
+            .col.col_1_3
+              .featured_sidebar
+                a(href="http://www.scorespro.com/?iframe=true&width=950&height=100%", rel="prettyPhoto[iframe]")
+                  img(src="images/image_LiveScores.png", width="300", height="65", alt="")
+                script(type="text/javascript")
+                  $(document).ready(function() {
+                  $("a[rel^='prettyPhoto']").prettyPhoto({social_tools:false});
+                  });
+                .featured_video
+                  img(src="images/featured_video_1.jpg", width="300", height="185", alt="")
+                  .video-title
+                    span Play of the Week
+                    br
+                    em Watch the Video
+                  a(href="http://www.youtube.com/watch?v=wpw-DeqsaVQ&width=825&height=490", rel="prettyPhoto", title="Play of the Week") view
+                .ads_300x250
+                  img(src="images/entry_img_6.jpg", width="300", height="250", alt="")
+            .clear
+          // / featured content
+          //
+              <div class="divider_space_thin"></div>
+                    <div class="col col_1_3">
+                      <div class="featured_post featured_style2">
+                        <div class="meta-date"><span class="ico_cat">NFL</span> Thursday, September 4, 1 hour ago</div>
+                        <div class="post-name">
+                          <div class="post-image"><img src="images/temp/entry_img_6.jpg" width="300" height="200" alt="" /></div>
+                          <div class="post-title"><a href="article.html">Diamondbacks edge Dodgers in 10 innings</a></div>
+                        </div>
+                        <p class="post-short"><strong>Los Angeles Times</strong> - Ian Kennedy failed to record win No. 20, but the Arizona Diamond backs still pulled out a 5-4 victory over the Los Angeles Dodgers after Chris Young worked a bases-loaded walk in the 10th inning till pulled out a 5-4 victory.</p>
+                        <div class="meta-bot"><a href="article.html" class="button_link"><span>Read</span></a> &nbsp; <a href="article.html#comments" class="link-comments">45 Comments</a></div>
+                      </div>
+                      <div class="featured_list">
+                        <ul>
+                          <li>
+                            <a href="article.html" class="post-title">Orioles play spoiler, rally behind Wieters to beat surging Rays</a>
+                            <div class="meta-date">Sep 4, 2 hours ago</div>
+                          </li>
+                          <li>
+                            <a href="article.html" class="post-title">Blackout streak over? Bucs nearly sold  out for MNF vs. Colts</a>
+                            <div class="meta-date">Sep 3, 1 week ago</div>
+                          </li>
+                          <li>
+                            <a href="article.html" class="post-title">Tofflemire, 46, found unconscious in his Post Falls home</a>
+                            <div class="meta-date">Aug 14, 3 weeks ago</div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="col col_1_3">
+                      <div class="featured_post featured_style2">
+                        <div class="meta-date"><span class="ico_cat">NBA</span> Thursday, September 4, 21 minutes ago</div>
+                        <div class="post-name">
+                          <div class="post-image"><img src="images/temp/entry_img_7.jpg" alt="" /></div>
+                          <div class="post-title"><a href="article.html">Derek Fisher to player to get in shape</a></div>
+                        </div>
+                        <p class="post-short"><strong>Yahoo! Sports</strong> - Last week, New York Knicks shooting specialist and players' union vice president Roger Mason Jr. caused a stir when his Twitter account spontaneously combusted and mistakenly told everyone thatwas "looking like a season"</p>
+                        <div class="meta-bot"><a href="article.html" class="button_link"><span>Read</span></a> &nbsp; <a href="article.html#comments" class="link-comments">45 Comments</a></div>
+                      </div>
+                      <div class="featured_list">
+                        <ul>
+                          <li>
+                            <a href="article.html" class="post-title">Timberwolves hire Adelman as coach despite neck injury</a>
+                            <div class="meta-date">Sep 4, 2 hours ago</div>
+                          </li>
+                          <li>
+                            <a href="article.html" class="post-title">Dwyane Wade and LeBron James make it tough to take charges</a>
+                            <div class="meta-date">Sep 3, 1 week ago</div>
+                          </li>
+                          <li>
+                            <a href="article.html" class="post-title">NBA lockout negotiations hit dead end: Fan reaction</a>
+                            <div class="meta-date">Aug 14, 3 weeks ago</div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="col col_1_3">
+                      <div class="featured_post featured_style2">
+                        <div class="meta-date"><span class="ico_cat">MLB</span> Thursday, September 3, 1 day ago</div>
+                        <div class="post-name">
+                          <div class="post-image"><img src="images/temp/entry_img_4.jpg" alt="" /></div>
+                          <div class="post-title"><a href="article.html">Brewers get beastly in record-tying frame</a></div>
+                        </div>
+                        <p class="post-short"><strong>MLB News</strong> - The Seahawks are expected to sign fullback Eddie Williams off of the Cleveland Browns practice squad according to Danny O'Neil of the Seattle Times. Williams' addition comes after fullback Michael Robinson suffered an ankle injury </p>
+                        <div class="meta-bot"><a href="article.html" class="button_link"><span>Read</span></a> &nbsp; <a href="article.html#comments" class="link-comments">45 Comments</a></div>
+                      </div>
+                      <div class="featured_list">
+                        <ul>
+                          <li>
+                            <a href="article.html" class="post-title">High-ceiling ALCS arms square off a day later</a>
+                            <div class="meta-date">Sep 4, 2 hours ago</div>
+                          </li>
+                          <li>
+                            <a href="article.html" class="post-title">Six pack: Brewers flex in fifth to take Game 1</a>
+                            <div class="meta-date">Sep 3, 1 week ago</div>
+                          </li>
+                          <li>
+                            <a href="article.html" class="post-title">Bauman: No explaining Greinke's home perfection</a>
+                            <div class="meta-date">Aug 14, 3 weeks ago</div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="clear"></div>
+
+      // / middle
+      .footer
+        .footer_inner
+          .container_12
+            .grid_8
+              h3 Sportedge
+              .botmenu
+                ul
+                  li
+                    a(href="#") NFL
+                  li
+                    a(href="#") MLB
+                  li
+                    a(href="#") NBA
+                  li
+                    a(href="#") NHL
+                  li
+                    a(href="#") NCAAF
+                  li
+                    a(href="#") NCAAB
+                  li
+                    a(href="#") NASCAR
+                  li
+                    a(href="#") Golf
+                  li
+                    a(href="#") Soccer
+                  li
+                    a(href="#") Tennis
+              .copyright
+                p
+                  | We have: 24,336 Readers. Join Us via
+                  a(href="#") Twitter
+                  | ,
+                  a(href="#") Facebook
+                  | ,
+                  a(href="#") Google+
+                  | ,
+                  a(href="#") Email
+                  | and
+                  a(href="#") RSS
+                  | .
+                  br
+                  | &#169; 2011 Media Inc. All Rights Reserved.
+                  a(href="#") Terms of Service
+                  | .
+                  a(href="contact.html") Contact
+                  | .
+                  br
+                  a(href="#") Privacy guidelines
+                  | .
+                  a(href="#") Advertise with Us
+                  | .
+                  a(href="#") About Us
+                  | .
+            .grid_4
+              h3 Follow us
+              .footer_social
+                a.icon-facebook(href="#") Facebook
+                a.icon-twitter(href="#") Twitter
+                a.icon-vimeo(href="#") Vimeo
+                a.icon-flickr(href="#") Flickr
+                a.icon-rss(href="#") RSS
+                .clear
+                span.link-readers 24,336  Readers
+            .clear
+

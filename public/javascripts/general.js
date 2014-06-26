@@ -1,39 +1,39 @@
 $(document).ready(function() {
 
-    var featured_list = "";
-    $.get("http://www.sportsinsights.com/feed/", function (data) {
-      $(data).find("item").each(function () { // or "item" or whatever suits your feed
-          var el = $(this);
-          var link        = el.find("link").text();
-          var title       = el.find("title").text();
-          var pubdate     = el.find("pubDate").text();
-          var category    = el.find("category").last().text();
-          var description = el.find("description").text();
-          // '<a href="'+hyperLink[i].url+'">'+hyperLink[i].text+'</a>'
-          featured_list += '<li><a class=post-title href="'+ link +'">'+ title +'</a></li><div class="meta-date"><span class="ico_cat">'+category+'</span>'+pubdate+'</div>';
-      });
-      $(".featured_list ul").html(featured_list);
-    });
-    var football = "";
-    var footballList = [];
-    $.ajax({
-      url: "http://www.scorespro.com/rss2/live-baseball.xml",
-      success: function (data) {
-        debugger;
-        $(data).find("item").each(function () { // or "item" or whatever suits your feed
-          var el = $(this);
-          var link        = el.find("link").text();
-          var title       = el.find("title").text();
-          var pubdate     = el.find("pubDate").text();
-          var category    = el.find("category").last().text();
-          var description = el.find("description").text();
-          // '<a href="'+hyperLink[i].url+'">'+hyperLink[i].text+'</a>'
-          $(".featured_post.meta-date").innerText(pubdate);
-          // football += '<li><a class=post-title href="'+ link +'">'+ title +'</a></li><div class="meta-date"><span class="ico_cat">'+category+'</span>'+pubdate+'</div>';
-          // $(".featured_list ul").html(featured_list);
-        });
-      }
-    });
+    // var featured_list = "";
+    // $.get("http://www.sportsinsights.com/feed/", function (data) {
+      // $(data).find("item").each(function () { // or "item" or whatever suits your feed
+          // var el = $(this);
+          // var link        = el.find("link").text();
+          // var title       = el.find("title").text();
+          // var pubdate     = el.find("pubDate").text();
+          // var category    = el.find("category").last().text();
+          // var description = el.find("description").text();
+        //  '<a href="'+hyperLink[i].url+'">'+hyperLink[i].text+'</a>'
+          // featured_list += '<li><a class=post-title href="'+ link +'">'+ title +'</a></li><div class="meta-date"><span class="ico_cat">'+category+'</span>'+pubdate+'</div>';
+      // });
+      // $(".featured_list ul").html(featured_list);
+    // });
+    // var football = "";
+    // var footballList = [];
+    // $.ajax({
+    //   url: "http://www.scorespro.com/rss2/live-baseball.xml",
+    //   success: function (data) {
+    //     debugger;
+    //     $(data).find("item").each(function () { // or "item" or whatever suits your feed
+    //       var el = $(this);
+    //       var link        = el.find("link").text();
+    //       var title       = el.find("title").text();
+    //       var pubdate     = el.find("pubDate").text();
+    //       var category    = el.find("category").last().text();
+    //       var description = el.find("description").text();
+    //       // '<a href="'+hyperLink[i].url+'">'+hyperLink[i].text+'</a>'
+    //       $(".featured_post.meta-date").innerText(pubdate);
+    //       // football += '<li><a class=post-title href="'+ link +'">'+ title +'</a></li><div class="meta-date"><span class="ico_cat">'+category+'</span>'+pubdate+'</div>';
+    //       // $(".featured_list ul").html(featured_list);
+    //     });
+    //   }
+    // });
 
 
 

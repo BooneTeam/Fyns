@@ -2387,6 +2387,11 @@ h3.toggle.box {
 .entry ul li {
   margin-bottom:10px}
 
+img.article-image{
+  height:150px;
+  width:100%;
+}
+
 .list_check ul,
 .list_delete ul ,
 .list_arrows ul,
