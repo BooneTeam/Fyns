@@ -7,37 +7,60 @@ var needle = require('needle');
 /* GET home page. */
 router.get('/', function(req, res) {
   something = getFeeds(function(data){
-    res.render('index', { articles: data  });
+    if (Object.keys(data).length== 4) {
+        data = sortObj(data);
+        console.dir(data);
+        res.render('index', { articles: data  });
+    }
   });
-  // console.log(something)
-  // res.render('index',{articles : []})
 });
 
+//Get Main Feed From Fox Sports
 function getFeeds(callback){
-needle.get('http://feeds.foxsports.com/feedout/syndicatedContent?categoryId=5', function(error, response) {
-  if (!error)
+  var feeds = [{ category : "nfl",url : 'http://feeds.foxsports.com/feedout/syndicatedContent?categoryId=5'},{ category : "featured", url : 'http://feeds.foxsports.com/feedout/syndicatedContent?categoryId=0'},{ category : "mlb", url : "http://feeds.foxsports.com/feedout/syndicatedContent?categoryId=49"}, {category : "nba", url : "http://feeds.foxsports.com/feedout/syndicatedContent?categoryId=73"}]
+  var stuff  = {};
+    feeds.forEach(function(feed){
+    needle.get(feed.url, function(error, response) {
+    if (!error) {
 
-    var xml = response.body;
-    var json =JSON.stringify(xml);
-    x = JSON.parse(json);
+        var xml = response.body;
+        var json = JSON.stringify(xml);
+        var x = JSON.parse(json);
+//      console.dir(x);
+        var items = x.rss.channel.item;
+        var attribution = x.rss.channel;
+        var obj = {};
+        var key = feed.category
+        stuff[key] = { group: items, attr: attribution};
+//      stuff.push(obj);
+//        console.dir(stuff.nfl);
+//      callback({"articles" : items.slice(0,3), attr : attribution});
+        callback(stuff);
+    }
+  });
 
 
-    // items.forEach(function(item){
-       // var link = item.link;
-       // var title = item.title;
-       // var pubDate = item.pubDate;
-       // var category = item.category;
-       // var description = item.description;
-       // console.dir(category);
-    // });
-    items = x.rss.channel.item;
-    console.log(items[7].enclosure.$.url)
-    callback({"articles" : items});
-    // return items;
 
-});
+  });
 }
 
+function sortObj(arr){
+    // Setup Arrays
+    var sortedKeys = new Array();
+    var sortedObj = {};
 
+    // Separate keys and sort them
+    for (var i in arr){
+        sortedKeys.push(i);
+    }
+    sortedKeys.sort();
+
+    // Reconstruct sorted obj based on keys
+    for (var i in sortedKeys){
+        sortedObj[sortedKeys[i]] = arr[sortedKeys[i]];
+    }
+    console.log(sortedObj);
+    return sortedObj;
+}
 
 module.exports = router;

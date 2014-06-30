@@ -19,26 +19,7 @@ html(xmlns="http://www.w3.org/1999/xhtml")
     // slider
     script(src="javascripts/jquery.bxSlider.min.js", type="text/javascript")
     link(href="stylesheets/bxSlider.css", media="screen", rel="stylesheet", type="text/css")
-    script(type="text/javascript")
-      $(window).load(function () {
-      var slider = $('#slider1').bxSlider({
-      controls: false
-      mode: 'vertical'
-      speed: 500
-      pause: 7000
-      easing: 'easeOutCubic'
-      auto: true
-      autoHover: true
-      });
-      $('#go-prev').click(function(){
-      slider.goToPreviousSlide()
-      return false;
-      });
-      $('#go-next').click(function(){
-      slider.goToNextSlide()
-      return false;
-      });
-      });
+
     //if IE 7
       link(rel="stylesheet", type="text/css", href="css/ie.css")
     link(href="custom.css", media="screen", rel="stylesheet", type="text/css")
@@ -125,35 +106,41 @@ html(xmlns="http://www.w3.org/1999/xhtml")
           .topmenu
             ul.dropdown
               li
-                a(href="category-NFL.html")
+                a(href="#")
+                  span BetUs.com Lines >
+              li
+                a(href="http://www.betus.com.pa/sportsbook/nfl-football-lines.aspx")
                   span NFL
               li
-                a(href="category-MLB.html")
+                a(href="http://www.betus.com.pa/sportsbook/baseball-lines.aspx")
                   span MLB
               li
-                a(href="category-NBA.html")
+                a(href="http://www.betus.com.pa/sportsbook/nba-basketball-lines.aspx")
                   span NBA
               li
-                a(href="category-NHL.html")
+                a(href="http://www.betus.com.pa/sportsbook/hockey-lines.aspx")
                   span NHL
               li
-                a(href="category-NCAAF.html")
+                a(href="http://www.betus.com.pa/sportsbook/college-football-lines.aspx")
                   span NCAAF
               li
-                a(href="category-NCAAB.html")
+                a(href="http://www.betus.com.pa/sportsbook/ncaa-basketball-lines.aspx")
                   span NCAAB
               li
                 a(href="category-Nascar.html")
                   span Nascar
               li
-                a(href="category-Golf.html")
+                a(href="http://www.betus.com.pa/sportsbook/golf-lines.aspx")
                   span Golf
               li
-                a(href="category-Soccer.html")
+                a(href="http://www.betus.com.pa/sportsbook/soccer-odds.aspx")
                   span Soccer
               li
-                a(href="category-NBA.html")
+                a(href="http://www.betus.com.pa/sportsbook/tennis-odds.aspx")
                   span Tennis
+              li
+                a(href="http://www.betus.com.pa/sportsbook/ufc-odds.aspx")
+                  span UFC
               //
                 <li><a href="#"><span>More</span></a>
                               <ul>
@@ -196,15 +183,95 @@ html(xmlns="http://www.w3.org/1999/xhtml")
                 !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
               // tabs in text
               .featured_tabs
+                ul.tabs
+                  li
+                    a(href="#featured") Featured News
+                  li
+                    a(href="#mlb") MLB News
+                  li
+                    a(href="#nba") NBA News
+                  li
+                    a(href="#nfl") NFL News
+                if articles
+                  each feature, index in articles
+                    div(id=index).tabcontent
+                      .featured_post
+                        each story in feature.group.slice(0,2)
+                          .meta-date
+                            span.ico_cat=story.category
+                              =" " + story.pubDate
+                          .post-name
+                            .post-image
+                              img.post-image(src=story.enclosure.$.url)
+                            .post-title
+                              a(href=story.title)=story.title
+                            .post-short
+                              =story.description
+                            .meta-bot
+                              a.button_link(href=story.link)
+                                span Read
+                        li Content Provided By:
+                          ul
+                            li=feature.attr.title
+                            img(src=feature.attr.image.url)
+                            //a.link-comments(href="article.html#comments") 45 Comments
+                      .featured_list
+                        ul
+                          if articles
+                            each story in feature.group.slice(2,-1)
+                              li
+                                a(href=story.stuff)
+                                  //img.article-image(src=article.enclosure.$.url)
+                                a.post-title(href=story.link)=story.title
+                                .meta-date
+                                  span.ico_cat=story.category
+                                  =story.pubDate
+                            li Content Provided By:
+                              ul
+                                li=feature.attr.title
+                                img(src=feature.attr.image.url)
+                      .clear
+                //#featured_tab_1.tabcontent
+                //  .featured_post
+                //    if articles
+                //      each article in articles.featured.group.slice(0,2)
+                //        .meta-date
+                //          span.ico_cat=article.category
+                //          =article.pubDate
+                //        .post-name
+                //          .post-image
+                //            img.post-image(src=article.enclosure.$.url)
+                //          .post-title
+                //            a(href=article.title)=article.title
+                //        .post-short
+                //          =article.description
+                //        .meta-bot
+                //          a.button_link(href=article.link)
+                //            span Read
+                //      li Content Provided By:
+                //        ul
+                //          li=articles.nfl.attr.title
+                //          img(src=articles.nfl.attr.image.url)
+                //          //a.link-comments(href="article.html#comments") 45 Comments
                 //
+                //  .featured_list
+                //    ul
+                //      if articles
+                //        each article in articles.featured.group.slice(3,5)
+                //          li
+                //            a(href=article.stuff)
+                //             img.article-image(src=article.enclosure.$.url)
+                //            a.post-title(href=article.link)=article.title
+                //            .meta-date
+                //              span.ico_cat=article.category
+                //              =article.pubDate
+                //        li Content Provided By:
+                //          ul
+                //            li=articles.featured.attr.title
+                //            img(src=articles.featured.attr.image.url)
+                //  .clear
 
-                                <ul class="tabs">
-                                  <li><a href="#featured_tab_1">Recent</a></li>
-                                  <li><a href="#featured_tab_2">Popular</a></li>
-                                  <li><a href="#featured_tab_3">Most Commented</a></li>
-                                </ul>
-
-                #featured_tab_1.tabcontent
+                #featured_tab_2.tabcontent
                   .featured_post
                     .meta-date
                       span.ico_cat NBA
@@ -220,49 +287,6 @@ html(xmlns="http://www.w3.org/1999/xhtml")
                       a.button_link(href="article.html")
                         span Read
                       a.link-comments(href="article.html#comments") 45 Comments
-                  .featured_list
-                    ul
-                      if articles
-                        each article in articles
-                          each info in article
-                            li
-                              img.article-image(src=info.enclosure.$.url)
-                              a.post-title(href=info.link)=info.title
-                              .meta-date
-                                span.ico_cat=info.category
-                                =info.pubDate
-                      li
-                        a.post-title(href="article.html") Wolves say they"re installing Adelman as coach
-                        .meta-date
-                          span.ico_cat NBA
-                          | Sep 3, 27 minutes ago
-                      li
-                        a.post-title(href="article.html") World title for Alistair Brownlee
-                        .meta-date
-                          span.ico_cat Tennis
-                          | Sep 3, 7 hours ago
-                      li
-                        a.post-title(href="article.html") Ranking the jobs of the NBA"s six new coaches
-                        .meta-date
-                          span.ico_cat NBA
-                          | Oct 3, 1 day ago
-                      li
-                        a.post-title(href="article.html") The Big 12 Conference has been a two-way street
-                        .meta-date
-                          span.ico_cat MLB
-                          | Sep 1, 4 day ago
-                      li
-                        a.post-title(href="article.html") The 12 Conference has been a 2-way street
-                        .meta-date
-                          span.ico_cat Soccer
-                          | Aug 3, 5 day ago
-                      li
-                        a.post-title(href="article.html") Tiger Woods plays down incident during the final round
-                        .meta-date
-                          span.ico_cat Golf
-                          | Aug 3, 5 day ago
-                    a.link-comments(href="article.html#comments") Browse Archive
-                  .clear
                 //
                     <div id="featured_tab_2" class="tabcontent">
                                   <div class="featured_post">
@@ -350,22 +374,19 @@ html(xmlns="http://www.w3.org/1999/xhtml")
                               </div>
                 // / tabs in text
             .col.col_1_3
-              .featured_sidebar
-                a(href="http://www.scorespro.com/?iframe=true&width=950&height=100%", rel="prettyPhoto[iframe]")
-                  img(src="images/image_LiveScores.png", width="300", height="65", alt="")
-                script(type="text/javascript")
+              a.twitter-timeline(href='https://twitter.com/ScoresPro', data-widget-id='377321155557744640') Tweets by @ScoresPro| script!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
                   $(document).ready(function() {
                   $("a[rel^='prettyPhoto']").prettyPhoto({social_tools:false});
                   });
-                .featured_video
-                  img(src="images/featured_video_1.jpg", width="300", height="185", alt="")
-                  .video-title
-                    span Play of the Week
-                    br
-                    em Watch the Video
-                  a(href="http://www.youtube.com/watch?v=wpw-DeqsaVQ&width=825&height=490", rel="prettyPhoto", title="Play of the Week") view
-                .ads_300x250
-                  img(src="images/entry_img_6.jpg", width="300", height="250", alt="")
+                //.featured_video
+                //  img(src="images/featured_video_1.jpg", width="300", height="185", alt="")
+                //  .video-title
+                //    span Play of the Week
+                //    br
+                //    em Watch the Video
+                //  a(href="http://www.youtube.com/watch?v=wpw-DeqsaVQ&width=825&height=490", rel="prettyPhoto", title="Play of the Week") view
+                //.ads_300x250
+                //  img(src="images/entry_img_6.jpg", width="300", height="250", alt="")
             .clear
           // / featured content
           //
