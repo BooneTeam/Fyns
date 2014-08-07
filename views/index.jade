@@ -40,26 +40,27 @@ html(xmlns="http://www.w3.org/1999/xhtml")
                     //em Cycling
                   | Friday 15th of September, 23 mintes ago
                 a.slide-title(href="#")
-                  strong Welcome to Fynnegans
+                  strong See all your scores!
                 //.slide-button
                   a.button_link(href="article.html")
                     //span Read
                   a.link-comments(href="article.html#comments") 86 Comments
-          //li(style="background: url('images/slider_1_3.jpg') no-repeat scroll center 0 transparent;")
+          li
+            //(style="background: url('images/slider_1_3.jpg') no-repeat scroll center 0 transparent;")
             // <img src="images/temp/slider_1_2.jpg" alt="02" class="slide-img" />
-            //.fakeimg
-            //.slide-text-wrapper
+            .fakeimg
+            .slide-text-wrapper
               .slide-text-content
-                .meta-date
+                //- .meta-date
                   span.ico_cat
                     em Soccer
                   | Friday 15th of September, 48 mintes ago
                 a.slide-title(href="#")
-                  strong Celtics come back from 2-0 to qualify in UCL finals
-                .slide-button
-                  a.button_link(href="article.html")
+                  strong Welcome to Fynnegans
+                 .slide-button
+                  //- a.button_link(href="article.html")
                     span Read
-                  a.link-comments(href="article.html#comments") 86 Comments
+                  //- a.link-comments(href="article.html#comments") 86 Comments
           //li(style="background: url('images/slider_1_3.jpg') no-repeat scroll center 0 transparent;")
             // <img src="images/temp/slider_1_3.jpg" alt="03" class="slide-img" />
             //.fakeimg
@@ -203,16 +204,16 @@ html(xmlns="http://www.w3.org/1999/xhtml")
                           .meta-date
                             span.ico_cat=story.category
                               =" " + story.pubDate
-                          .post-name
-                            .post-image
-                              img.post-image(src=story.enclosure.$.url)
-                            .post-title
-                              a(href=story.title)=story.title
-                            .post-short
-                              =story.description
-                            .meta-bot
-                              a.button_link(href=story.link)
-                                span Read
+                          .post-image
+                            img.post-image(src=story.enclosure.$.url)
+
+                          h5
+                            a(href=story.link)=story.title
+                          .post-short
+                            =story.description
+                          .meta-bot
+                            a.button_link(href=story.link)
+                              span Read
                         li Content Provided By:
                           ul
                             li=feature.attr.title
@@ -223,7 +224,7 @@ html(xmlns="http://www.w3.org/1999/xhtml")
                           if articles
                             each story in feature.group.slice(2,-1)
                               li
-                                a(href=story.stuff)
+                                a.button_link(href=story.link)
                                   //img.article-image(src=article.enclosure.$.url)
                                 a.post-title(href=story.link)=story.title
                                 .meta-date
