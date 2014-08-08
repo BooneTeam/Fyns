@@ -105,7 +105,7 @@ html(xmlns="http://www.w3.org/1999/xhtml")
             a(href="#")
               img(src="images/logo.png", alt="")
           .top_login_box
-            a(href="https://www.bookiemarket.com/splashscreen/bookiemarket/LOGIN/playerlogin.aspx?") Player Sign In
+            a(href="https://www.bookiemarket.com/fynneganz") Player Sign In
             a(href="https://www.bookiemarket.com/splashscreen/bookiemarket/LOGIN/agentlogin.aspx?") Agent Sign In
           .top_login_box_mobile
             a(href="http://m.bookiemarket.com") Player Sign In
@@ -385,6 +385,21 @@ html(xmlns="http://www.w3.org/1999/xhtml")
                               </div>
                 // / tabs in text
             .col.col_1_3
+              h4 Need to Sign Up?
+              form#myform(action='/contact', method='post', enctype='application/x-www-form-urlencoded')
+                | Name:
+                br
+                input(type='text', name='name', placeholder='your name')
+                br
+                | E-mail:
+                br
+                input(type='text', name='email', placeholder='your email')
+                br
+                | password:
+                br
+                input(type='password', name='password', placeholder='password', size='50')
+                br
+                input(type='submit', value='Submit' id='submit')
               a.twitter-timeline(href="https://twitter.com/justNFLSCORES" data-widget-id="497750200249638914") Tweets by @justNFLSCORES
               a.twitter-timeline(href="https://twitter.com/justNFLSCORES" data-widget-id="497757076546805760") Tweets by @MLBSLivescores0
               //- a.twitter-timeline(href='https://twitter.com/justNFLSCORES', data-widget-id='377321155557744640') Tweets by @ScoresPro| script!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
