@@ -1,5 +1,25 @@
 $(document).ready(function() {
 
+if (matchMedia) {
+  var mq = window.matchMedia("(min-width: 500px)");
+  mq.addListener(WidthChange);
+  WidthChange(mq);
+}
+
+// media query change
+function WidthChange(mq) {
+
+  if (mq.matches) {
+    console.log('bigger than 500px');
+  }
+  else {
+    $(".top_login_box a")[0].href = "http://m.bookiemarket.com";
+    $(".top_login_box a")[1].href = "http://m.bookiemarket.com";
+    // window width is less than 500px
+  }
+
+}
+
     // var featured_list = "";
     // $.get("http://www.sportsinsights.com/feed/", function (data) {
       // $(data).find("item").each(function () { // or "item" or whatever suits your feed
