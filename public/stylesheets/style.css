@@ -1122,7 +1122,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bf0300', end
 
 .top_login_box {
   background: url(images/top_login_box.png) no-repeat;
-  width:142px;
+  width:30%;
   height:29px;
   font-family:'LatoBold', Arial, Helvetica, sans-serif;
   font-size:11px;
@@ -1134,7 +1134,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bf0300', end
 .top_login_box a {
   color:#c8c8c8;
   display:block;
-  width:66px;
+  width:40%;
   float:left;
   text-align:center;
   text-shadow:0 1px 2px #333}
