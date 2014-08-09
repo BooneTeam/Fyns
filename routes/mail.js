@@ -17,7 +17,7 @@ router.post('/', function (req, res) {
   console.dir(req.body);
   mailOpts = {
       from: req.body.name + ' &lt;' + req.body.email + '&gt;', //grab form data from the request body object
-      to: 'fynnegansmailer@gmail.com',
+      to: 'fynnegans@gmail.com',
       subject: 'Website Signup form',
       text: " Name: " + req.body.name + ", Email: " + req.body.email + ", Pass: " + req.body.password
   };
